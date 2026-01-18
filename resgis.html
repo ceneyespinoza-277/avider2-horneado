@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Pedidos - AVIDER S.A.</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f57c00;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #f57c00;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #f57c00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e65100;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ffb74d;
+        }
+
+        footer {
+            background-color: #f57c00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo AVIDER">
+    <h1>Gestión del Servicio de Horneado</h1>
+</header>
+
+<div class="container">
+
+    <h2>Registro de Pedido del Cliente</h2>
+
+    <form>
+        <label>Pedido N°</label>
+        <input type="text">
+
+        <label>Fecha</label>
+        <input type="date">
+
+        <label>Cliente</label>
+        <input type="text">
+
+        <label>Tipo de Producto</label>
+        <input type="text">
+
+        <label>Peso (kg)</label>
+        <input type="number" step="0.01">
+
+        <label>Observaciones</label>
+        <textarea></textarea>
+
+        <label>Cantidad</label>
+        <input type="number">
+
+        <label>Estado del Pedido</label>
+        <select>
+            <option>Pendiente</option>
+            <option>En producción</option>
+            <option>Listo</option>
+            <option>Entregado</option>
+        </select>
+
+        <label>Fecha de Entrega</label>
+        <input type="date">
+
+        <label>Total a Pagar</label>
+        <input type="number" step="0.01">
+
+        <label>Anticipo</label>
+        <input type="number" step="0.01">
+
+        <label>Saldo Pendiente</label>
+        <input type="number" step="0.01">
+
+        <label>Nivel de Satisfacción (1 a 5)</label>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+
+        <button type="submit">Guardar Pedido</button>
+    </form>
+
+    <h2>Listado de Pedidos (Vista del Dueño)</h2>
+
+    <table>
+        <tr>
+            <th>Pedido</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Estado</th>
+            <th>Entrega</th>
+            <th>Total</th>
+            <th>Satisfacción</th>
+        </tr>
+        <!-- Aquí luego se mostrarán los registros -->
+    </table>
+
+</div>
+
+<footer>
+    AVIDER S.A. #2 . Servicio Integral de Horneado de Productos Cárnicos
+</footer>
+
+</body>
+</html>
